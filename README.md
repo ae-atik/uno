@@ -1,4 +1,4 @@
-"# UNO Game
+# UNO Game
 
 This is a text-based UNO game playable in the terminal/console. It supports 2 to 8 players with customizable names.
 
