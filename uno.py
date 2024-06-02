@@ -125,7 +125,10 @@ class UNOGame:
 
     def get_card_choice(self, player, playable_cards):
         while True:
-            choice = input(f"{player.name}, choose a card to play from {playable_cards}: ")
+            choice = input(f"{player.name}, choose a card to play from {playable_cards} (or type '-h' for rules): ")
+            if choice == '-h':
+                self.display_rules()
+                continue
             if choice in playable_cards:
                 return choice
             else:
@@ -148,7 +151,7 @@ class UNOGame:
                 return color
 
     def call_uno(self, player):
-        call = input().strip().lower()
+        call = input("You have one card left! Type 'UNO' to call UNO: ").strip().lower()
         if call == 'uno':
             player.called_uno = True
             print(f"{player.name} successfully called UNO!")
@@ -160,6 +163,11 @@ class UNOGame:
         input("Press any key to end your turn and pass to the next player...")
         self.clear_screen()
 
+    def display_rules(self):
+        self.clear_screen()
+        print(GAME_RULES)
+        input()
+
     def display_final_scores(self):
         print("\nFinal Scores:")
         for player in self.players:
@@ -168,6 +176,7 @@ class UNOGame:
 
     def start(self):
         print("Starting UNO game!")
+        print("At any time during the game, type '-h' to see the rules.")
         while True:
             if self.play_turn():
                 break
