@@ -1,13 +1,3 @@
-That’s the design and everything explained down!!!
-
-https://www.figma.com/design/2gerbM45yxP7qm9EBIwPdU/EstateX-Game?m=dev&node-id=0-1&t=8YVlZGJXO8KSlAD1-1
-
-Once you review along with the doc here:
-https://docs.google.com/document/d/1GPu_--K5sBtHSV0m5ptjoMAbRshNHl7SYnx3GU2H0Rg/edit?usp=sharing
-
-
-
-
 # UNO Game
 
 This is a text-based UNO game playable in the terminal/console. It supports 2 to 8 players with customizable names.
